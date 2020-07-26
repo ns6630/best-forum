@@ -1,0 +1,62 @@
+.topic {
+  color: #B99C74;
+  display: flex;
+  border-top: 1px solid #050505;
+}
+
+.topic:nth-child(odd) {
+  background-color: #1A1B18;
+}
+
+.topic:nth-child(even) {
+  background-color: #0F0F0F;
+}
+
+.topic * {
+  box-sizing: border-box;
+}
+
+.topic__forum {
+  flex: 1 0 auto;
+  padding: 5px;
+}
+
+.topic__stats {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.topic__last-post {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.topic__name a {
+  color: #B99C74;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+.topic__name a:hover {
+  color: #FFE5B5;
+  text-shadow: 0px 0px 2px #494742;
+}
+
+.topic__threads {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.topic__posts {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+}

@@ -1,0 +1,17 @@
+.default-layout {
+    width: 100%;
+    background-image: url(../img/bg.jpg), url(../img/bg-part.jpg);
+    background-position: left top, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 100%;
+}
+
+.default-layout__content {
+    width: 60%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 10vh 0;
+
+    display: flex;
+    flex-direction: column;
+}
