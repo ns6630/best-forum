@@ -1,6 +1,5 @@
 import React from "react";
 
-import User from "../types/UserType";
 import "./Topic.css";
 import TopicType from "../types/TopicType";
 

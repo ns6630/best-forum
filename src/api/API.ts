@@ -1,5 +1,4 @@
 import CategoryType from "../types/CategiryType";
-import TopicType from "../types/TopicType";
 
 export function fetchCategories(): Promise<CategoryType[]> {
   const mockData: CategoryType[] = [

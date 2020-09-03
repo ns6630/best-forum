@@ -46,7 +46,6 @@ export default function HomePage(props: HomePageProps) {
               </Category>
             );
           }
-          
         })}
     </div>
   );

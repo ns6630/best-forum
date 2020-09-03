@@ -1,18 +1,18 @@
 import React from "react";
 import "./Header.css";
-import logo from"../img/logo.png";
+import logo from "../img/logo.png";
 
 export interface HeaderProps {
-    children?: React.ReactChild | React.ReactChild[]
+    children?: React.ReactNode;
 }
 
 export default function Header(props: HeaderProps) {
-    return (
-        <header>
-            <div className="header-logo">
-                <img src={logo} alt="logo"/>
-            </div>
-            {props.children}
-        </header>
-    )
+  return (
+    <header>
+      <div className="header-logo">
+        <img src={logo} alt="logo" />
+      </div>
+      {props.children}
+    </header>
+  );
 }

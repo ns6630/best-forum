@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Category.css";
-import Topic from "./Topic";
 
 export interface CategoryProps {
   name: string;
