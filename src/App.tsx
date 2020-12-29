@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageContent from "./components/PageContent";
 import HomePage from "./pages/HomePage";
+import TopicPage from "./pages/TopicPage";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route path="/topic/:id">
+            <TopicPage />
           </Route>
         </Switch>
       </PageContent>

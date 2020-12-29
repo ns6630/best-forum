@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Category.css";
+import Table from "./Table";
 
 export interface CategoryProps {
   name: string;
@@ -11,7 +12,7 @@ export default function Category(props: CategoryProps) {
   const [expanded, setExpanded] = useState(props.initialExpanded);
 
   return (
-    <div className="category">
+    <Table className="category">
       <div className="category__header" onClick={() => setExpanded(!expanded)}>
         <div className="category__name">
           {props.name}{" "}
@@ -31,6 +32,6 @@ export default function Category(props: CategoryProps) {
       >
         {props.children}
       </div>
-    </div>
+    </Table>
   );
 }

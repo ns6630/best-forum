@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as API from "../api/API";
-import CategoryType from "../types/CategiryType";
+import CategoryType from "../types/CategoryType";
 import Loader from "../components/Loader";
 import TopicType from "../types/TopicType";
 import Topic from "../components/Topic";
@@ -16,13 +16,11 @@ export interface CategoryTopics {
 export default function HomePage(props: HomePageProps) {
   const [categories, setCategories] = useState<CategoryType[] | null>(null);
 
-  const getCategories = () => {
+  useEffect(() => {
     API.fetchCategories().then((categoriesData) =>
       setCategories(categoriesData)
     );
-  };
-
-  useEffect(() => getCategories());
+  }, []);
 
   return (
     <div>

@@ -60,3 +60,7 @@
   justify-content: space-between;
   font-size: .8rem;
 }
+
+.topic__last-post-user {
+  font-weight: bold;
+}

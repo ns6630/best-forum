@@ -3,7 +3,7 @@ function getStrWithZeroPrefix(s: string) {
 }
 
 
-export default function getFormatedDate(date: Date) {
+export function getFormattedDate(date: Date) {
   const year = date.getFullYear();
   const month = getStrWithZeroPrefix(
     (date.getMonth() + 1).toString()

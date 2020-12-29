@@ -1,4 +1,5 @@
-import CategoryType from "../types/CategiryType";
+import CategoryType from "../types/CategoryType";
+import ThreadType from "../types/ThreadType";
 
 export function fetchCategories(): Promise<CategoryType[]> {
   const mockData: CategoryType[] = [
@@ -86,6 +87,66 @@ export function fetchCategories(): Promise<CategoryType[]> {
   ];
 
   return new Promise((resolve) => {
-    setTimeout(() => resolve(mockData), 1500);
+    setTimeout(() => resolve(mockData), 500);
   });
+}
+
+export function fetchThreads(topicId:string): Promise<ThreadType[]> {
+  const mockData: ThreadType[] = [
+    {
+      id: 1,
+      name: "Test thread",
+      order: 0,
+      author: {
+        id: 1,
+        username: "Johny"
+      },
+      pubDate: new Date(2020, 7, 3, 10, 18, 34),
+      lastPostUser: {
+        id: 1,
+        username: "Johny"
+      },
+      lastPostDate: new Date(2020, 7, 3, 10, 18, 34),
+      replies: 65,
+      views: 12354,
+    },
+    {
+      id: 2,
+      name: "Test thread",
+      order: 0,
+      author: {
+        id: 1,
+        username: "Johny"
+      },
+      pubDate: new Date(2020, 7, 3, 10, 18, 34),
+      lastPostUser: {
+        id: 1,
+        username: "Johny"
+      },
+      lastPostDate: new Date(2020, 7, 3, 10, 18, 34),
+      replies: 65,
+      views: 12354,
+    },
+    {
+      id: 3,
+      name: "Test thread",
+      order: 0,
+      author: {
+        id: 1,
+        username: "Johny"
+      },
+      pubDate: new Date(2020, 7, 3, 10, 18, 34),
+      lastPostUser: {
+        id: 1,
+        username: "Johny"
+      },
+      lastPostDate: new Date(2020, 7, 3, 10, 18, 34),
+      replies: 65,
+      views: 12354,
+    }
+  ];
+  
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(mockData), 500);
+  })
 }

@@ -2,7 +2,8 @@ import React from "react";
 
 import "./Topic.css";
 import TopicType from "../types/TopicType";
-import getFormatedDate from "../util/Date";
+import { getFormattedDate } from "../util/Date";
+import { Link } from "react-router-dom";
 
 export interface TopicProps {
   topic: TopicType;
@@ -13,7 +14,7 @@ export default function Topic({topic}: TopicProps) {
     <div className="topic">
       <div className="topic__forum">
         <div className="topic__name">
-          <a href="">{topic.name}</a>
+          <Link to={`/topic/${topic.id}`}>{topic.name}</Link>
         </div>
         <div className="topic__description">{topic.description}</div>
       </div>
@@ -31,7 +32,7 @@ export default function Topic({topic}: TopicProps) {
         <div className="topic__last-post-user">
           {topic.lastPostUser.username}
         </div>
-        <div className="topic__last-post-user">{getFormatedDate(topic.lastPostDate)}</div>
+        <div className="topic__last-post-date">{getFormattedDate(topic.lastPostDate)}</div>
       </div>
     </div>
   );
