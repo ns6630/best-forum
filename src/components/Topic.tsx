@@ -32,7 +32,11 @@ export default function Topic({topic}: TopicProps) {
         <div className="topic__last-post-user">
           {topic.lastPostUser.username}
         </div>
+<<<<<<< HEAD
         <div className="topic__last-post-date">{getFormattedDate(topic.lastPostDate)}</div>
+=======
+        <div className="topic__last-post-user">{getFormatedDate(topic.lastPostDate)}</div>
+>>>>>>> 2e5583ac59213ca5bf1f90cfe34b5465b659893e
       </div>
     </div>
   );
